@@ -68,10 +68,11 @@ ol {
     padding-left: 30px;
     padding-top: 20px;
     font-size: 50px;
+    color: #bababa;
 }
 
 .experience {
-    background-color: #888888;
+    background-color: #142d4c;
 }
 
 .expContainer {
@@ -87,7 +88,7 @@ ol {
     padding-right: 10%;
     border-radius: 30px;
     margin: 20px 0;
-    background-color: rgb(199, 199, 199);
+    background-color: #385170;
 }
 
 @media only screen and (max-width: 500px) {
@@ -104,7 +105,7 @@ ol {
 }
 
 .company:hover {
-    background-color: rgb(168, 167, 167);
+    background-color: #27394f
 }
 
 .companyLogo {
@@ -125,4 +126,10 @@ ol {
     flex-direction: column;
     gap: 60px;
     padding-bottom: 50px;
+
+}
+
+.expdetail {
+    color: rgb(190, 190, 190);
+    font-weight: 700;
 }
