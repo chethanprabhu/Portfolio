@@ -76,17 +76,39 @@ ol {
 
 .expContainer {
     display: flex;
-}
-
-.companyLogo {
-    height: 120px;
+    gap: 30px;
+    justify-content: center;
 }
 
 .company {
     padding-top: 50px;
-    width: 45%;
+    width: 20%;
     padding-left: 10%;
     padding-right: 10%;
+    border-radius: 30px;
+    margin: 20px 0;
+    background-color: rgb(199, 199, 199);
+}
+
+@media only screen and (max-width: 500px) {
+    .expContainer {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .company {
+        width: 60%;
+    }
+}
+
+.company:hover {
+    background-color: rgb(168, 167, 167);
+}
+
+.companyLogo {
+    height: 120px;
 }
 
 .footer {
