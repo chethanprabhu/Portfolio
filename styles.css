@@ -3,6 +3,19 @@
     margin: 0;
 }
 
+.banner {
+    position: fixed;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+}
+
+.cross {
+    width: 200px !important;
+}
+
 .homepage {
     position: relative;
     text-align: center;
