@@ -132,14 +132,14 @@ ol {
     }
 
     .company {
-        width: 60% !important;
+        width: 80% !important;
         border-radius: 30px !important;
         margin: 20px 0 !important;
         background-color: #4a4e69 !important;
         display: flex !important;
         flex-direction: column !important;
         justify-content: stretch !important;
-        height: 700px !important;
+        height: 600px !important;
     }
 }
 
