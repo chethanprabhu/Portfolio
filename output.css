@@ -10,8 +10,7 @@
   background-color: white;
   z-index: 10;
 }
-
-.cross {
+.banner__cross {
   margin: 5px;
   width: 50px !important;
   background-color: #27394f;
@@ -20,20 +19,12 @@
   cursor: pointer;
 }
 
-@media (max-width: 500px) {
-  .cross {
-    width: 150px !important;
-    height: 40px !important;
-    transform: translateY(60%);
-  }
-}
-.homepage {
+.landing {
   position: relative;
   text-align: center;
   color: white;
 }
-
-.hero {
+.landing__hero {
   filter: blur(3px);
   -webkit-filter: blur(3px);
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("./images/hero2.avif");
@@ -42,34 +33,29 @@
   width: 100%;
   height: 100vh;
 }
-
-.center {
+.landing__hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.name {
+.landing__hero-text__name {
   font-size: 60px;
 }
-
-.role {
+.landing__hero-text__hero {
   font-size: 30px;
   font-weight: 300;
 }
 
-.skillset {
+.skills {
   background-color: #f0f0f0;
 }
-
-.skillHeader {
+.skills__header {
   padding-left: 30px;
   padding-top: 20px;
   font-size: 50px;
 }
-
-.skillsetUL {
+.skills__lists {
   display: flex;
   gap: 30px;
   flex-direction: column;
@@ -77,34 +63,29 @@
   font-weight: 500;
   padding: 40px;
 }
-
-ol {
+.skills__lists__list {
   padding: 20px;
 }
-
-.skillLogo {
+.skills__lists__logo {
   height: 25px;
   padding-right: 10px;
-}
-
-.expHeader {
-  padding-left: 30px;
-  padding-top: 20px;
-  font-size: 50px;
-  color: #424242;
 }
 
 .experience {
   background-image: linear-gradient(to right, #9bf8f4, #6f7bf7);
 }
-
-.expContainer {
+.experience__header {
+  padding-left: 30px;
+  padding-top: 20px;
+  font-size: 50px;
+  color: #424242;
+}
+.experience__container {
   display: flex;
   gap: 50px;
   justify-content: center;
 }
-
-.company {
+.experience__container__company {
   width: 30%;
   border-radius: 30px;
   margin: 20px 0;
@@ -115,67 +96,38 @@ ol {
   height: 600px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-
-@media (min-width: 500px) and (max-width: 950px) {
-  .companyLogoWrapper {
-    display: none !important;
-  }
-  .expWrapper {
-    height: 500px !important;
-    border-radius: 30px !important;
-  }
-  .company {
-    height: 500px;
-    margin: 20px 0 !important;
-  }
-}
-@media (max-width: 500px) {
-  .expContainer {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    flex-direction: column;
-  }
-  .companyLogoWrapper {
-    display: flex !important;
-  }
-  .expWrapper {
-    display: flex !important;
-    flex-direction: column !important;
-    padding-bottom: 20px !important;
-    background-color: #efefef !important;
-    border-radius: 0 !important;
-    border-bottom-left-radius: 30px !important;
-    border-bottom-right-radius: 30px !important;
-    height: 65% !important;
-  }
-  .company {
-    width: 80% !important;
-    border-radius: 30px !important;
-    margin: 20px 0 !important;
-    background-color: #4a4e69 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: stretch !important;
-    height: 600px !important;
-  }
-}
-.company:hover {
+.experience__container__company:hover {
   background-color: #27394f;
 }
-
-.companyLogoWrapper {
+.experience__container__company__logoWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 35%;
 }
-
-.companyLogo {
+.experience__container__company__logoWrapper__logo {
   height: 150px;
   width: 150px;
   border-radius: 50%;
   padding: 20px auto;
+}
+.experience__container__company__detailWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  background-color: #efefef;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 65%;
+}
+.experience__container__company__detailWrapper__header {
+  font-size: 30px;
+  padding: 20px;
+}
+.experience__container__company__detailWrapper__detail {
+  color: rgb(28, 28, 28);
+  font-weight: 500;
+  padding: 20px;
 }
 
 .footer {
@@ -187,25 +139,56 @@ ol {
   color: aliceblue;
 }
 
-.expWrapper {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
-  background-color: #efefef;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  height: 65%;
+@media (max-width: 500px) {
+  .banner__cross {
+    width: 150px !important;
+    height: 40px !important;
+    transform: translateY(60%);
+  }
 }
-
-.expdetailHeader {
-  font-size: 30px;
-  padding: 20px;
+@media (min-width: 500px) and (max-width: 950px) {
+  .experience__container__company {
+    height: 500px;
+    margin: 20px 0 !important;
+  }
+  .experience__container__company__logoWrapper {
+    display: none !important;
+  }
+  .experience__container__company__detailWrapper {
+    height: 500px !important;
+    border-radius: 30px !important;
+  }
 }
-
-.expdetail {
-  color: rgb(28, 28, 28);
-  font-weight: 500;
-  padding: 20px;
+@media (max-width: 500px) {
+  .experience__container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .experience__container__company {
+    width: 80% !important;
+    border-radius: 30px !important;
+    margin: 20px 0 !important;
+    background-color: #4a4e69 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: stretch !important;
+    height: 600px !important;
+  }
+  .experience__container__company__logoWrapper {
+    display: flex !important;
+  }
+  .experience__container__company__detailWrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    padding-bottom: 20px !important;
+    background-color: #efefef !important;
+    border-radius: 0 !important;
+    border-bottom-left-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+    height: 65% !important;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
