@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch styles.scss:output.css"
+    "sass": "sass --watch styles.scss:output.css",
+    "start": "open-cli index.html"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/chethanprabhu/Portfolio#readme",
   "devDependencies": {
+    "open-cli": "^7.2.0",
     "sass": "^1.65.1"
   }
 }
