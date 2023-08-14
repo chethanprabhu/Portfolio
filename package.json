@@ -4,7 +4,8 @@
   "description": "My personal portfolio website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch styles.scss:output.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/chethanprabhu/Portfolio/issues"
   },
-  "homepage": "https://github.com/chethanprabhu/Portfolio#readme"
+  "homepage": "https://github.com/chethanprabhu/Portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.65.1"
+  }
 }
