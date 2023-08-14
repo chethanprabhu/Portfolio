@@ -20,6 +20,14 @@
     cursor: pointer;
 }
 
+@media (max-width: 500px) {
+    .cross {
+      width: 150px !important;
+      height: 40px !important;
+      transform: translateY(60%);
+    }
+  }
+
 .homepage {
     position: relative;
     text-align: center;
