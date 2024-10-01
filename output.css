@@ -3,22 +3,6 @@
   margin: 0;
 }
 
-.banner {
-  position: fixed;
-  display: flex;
-  width: 100%;
-  background-color: white;
-  z-index: 10;
-}
-.banner__cross {
-  margin: 5px;
-  width: 50px !important;
-  background-color: #27394f;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .landing {
   position: relative;
   text-align: center;
@@ -137,6 +121,10 @@
   align-items: center;
   justify-content: center;
   color: aliceblue;
+}
+
+.footer span {
+  margin: 0 5px;
 }
 
 @media (max-width: 500px) {
