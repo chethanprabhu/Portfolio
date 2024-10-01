@@ -5,25 +5,6 @@
     margin: 0;
 }
 
-// BANNER SECTION
-
-.banner {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    background-color: white;
-    z-index: 10;
-
-    &__cross {
-        margin: 5px;
-        width: 50px !important;
-        background-color: #27394f;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-}
-
 // LANDING SECTION
 
 .landing {
