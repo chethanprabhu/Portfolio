@@ -180,3 +180,7 @@
 }
 
 /*# sourceMappingURL=output.css.map */
+
+li.blue ~ li {
+  background-color: red;
+}

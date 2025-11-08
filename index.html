@@ -1,62 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chethan Prabhu</title>
-    <link rel="stylesheet" href="./output.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chethan Prabhu</title>
+  <meta name="description" content="Portfolio of Chethan Prabhu — Frontend Web Developer" />
+  <style>
+    /* ===== Base ===== */
+    :root {
+      --bg:#0e1116; --text:#e7ebf2; --muted:#a8b0c2; --card:#1a2233; --line:#2a3550;
+      --brand:#7c98ff; --brand-2:#00e7d4; --radius:22px; --shadow:0 10px 28px rgb(0 0 0 / 30%);
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text);background:radial-gradient(1200px 600px at 10% 0%,#141a29 0%,var(--bg) 60%) fixed;line-height:1.55}
+    img{display:block;max-width:100%}
+    .container{width:min(92vw,var(--maxw));margin-inline:auto}
+    
+    /* ===== Landing ===== */
+    .landing{position:relative;min-height:100vh;display:grid;place-items:center;overflow:hidden}
+    .landing__hero{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.35) blur(2px)}
+    .landing__hero-text{position:relative;text-align:center;padding:40px}
+    .landing__hero-text__name{margin:0;font-size:clamp(28px,6vw,62px);letter-spacing:2px}
+    .landing__hero-text__role{margin:8px 0 0;font-size:clamp(16px,3.2vw,28px);font-weight:500;color:var(--muted)}
+
+    /* ===== Skills ===== */
+    section{padding:56px 0}
+    .skills{background:#0f1523}
+    .skills__header{font-size:clamp(22px,3.6vw,38px);margin:0 0 18px 0}
+    .skills__lists{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0;margin:0}
+    .skills__lists__item{display:flex;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+    .skills__lists__logo{width:24px;height:24px}
+
+    /* ===== Experience ===== */
+    .experience{background:linear-gradient(90deg,#9bf8f415,#6f7bf715)}
+    .experience__header{font-size:clamp(22px,3.6vw,38px);margin:0 0 18px 0}
+    .experience__container{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+    .experience__container__company{display:grid;grid-template-rows:auto 1fr;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+    .experience__container__company__logoWrapper{display:grid;place-items:center;padding:22px;background:#111624}
+    .experience__container__company__logoWrapper__logo{width:120px;height:120px;border-radius:50%;object-fit:cover}
+    .experience__container__company__detailWrapper{background:#eef1f7;color:#1b1f2c;padding:18px 20px}
+    .experience__container__company__detailWrapper__header{margin:0 0 6px 0;font-size:22px;color:#1b1f2c}
+    .experience__container__company__detailWrapper__detail{margin:8px 0 0 0;font-weight:500}
+
+    /* ===== Footer ===== */
+    .footer{background:#0b0f18;color:#cfd5e6;display:flex;align-items:center;justify-content:center;height:88px}
+    .footer span{margin:0 6px}
+
+    /* ===== Responsive ===== */
+    @media (max-width:900px){
+      .experience__container{grid-template-columns:1fr}
+    }
+    @media (max-width:560px){
+      .skills__lists{grid-template-columns:1fr 1fr}
+      .experience__container__company__logoWrapper__logo{width:96px;height:96px}
+    }
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+  </style>
 </head>
 <body>
-    <div class="landing">
-        <img class="landing__hero" src="./images/hero2.jpg" alt="homepage-image">
-        <div class="landing__hero-text">
-            <h1 class="landing__hero-text__name">CHETHAN PRABHU</h1>
-            <h2 class="landing__hero-text__role">Frontend Web Developer</h2>
-        </div>
+  <!-- Landing -->
+  <section class="landing" aria-label="Intro">
+    <img class="landing__hero" src="./images/hero2.jpg" alt="Background banner" />
+    <div class="landing__hero-text">
+      <h1 class="landing__hero-text__name">CHETHAN PRABHU</h1>
+      <h2 class="landing__hero-text__role">Frontend Web Developer</h2>
     </div>
-    <div class="skills">
-        <h2 class="skills__header">Skillset</h2>
-        <ul class="skills__lists">
-            <ol class="skills__lists__list"><img class="skills__lists__logo" src="./images/react.png"/>React</ol>
-            <ol class="skills__lists__list"><img class="skills__lists__logo" src="./images/js.png"/>Javascript</ol>
-            <ol class="skills__lists__list"><img class="skills__lists__logo" src="./images/ts.png"/>Typescript</ol>
-            <ol class="skills__lists__list"><img class="skills__lists__logo" src="./images/html.png"/>HTML</ol>
-            <ol class="skills__lists__list"><img class="skills__lists__logo" src="./images/scss.png"/>S(CSS)</ol>
-            <ol class="skills__lists__list"><img class="skills__lists__logo" src="./images/jest.png"/>Jest</ol>
-        </ul>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" aria-labelledby="skills-title">
+    <div class="container">
+      <h2 id="skills-title" class="skills__header">Skillset</h2>
+      <ul class="skills__lists">
+        <li class="skills__lists__item"><img class="skills__lists__logo" src="./images/react.png" alt="React logo"/>React</li>
+        <li class="skills__lists__item"><img class="skills__lists__logo" src="./images/js.png" alt="JavaScript logo"/>Javascript</li>
+        <li class="skills__lists__item"><img class="skills__lists__logo" src="./images/ts.png" alt="TypeScript logo"/>Typescript</li>
+        <li class="skills__lists__item"><img class="skills__lists__logo" src="./images/html.png" alt="HTML logo"/>HTML</li>
+        <li class="skills__lists__item"><img class="skills__lists__logo" src="./images/scss.png" alt="SCSS logo"/>S(CSS)</li>
+        <li class="skills__lists__item"><img class="skills__lists__logo" src="./images/jest.png" alt="Jest logo"/>Jest</li>
+      </ul>
     </div>
-    <div class="experience">
-        <h2 class="experience__header">Professional Experience</h2>
-        <div class="experience__container">
-            <div class="experience__container__company">
-                <div class="experience__container__company__logoWrapper">
-                    <img class="experience__container__company__logoWrapper__logo" src="./images/fintellix.jfif"/>
-                </div>
-                <div class="experience__container__company__detailWrapper">
-                    <h2 class="experience__container__company__detailWrapper__header">Fintellix</h2>
-                    <h3 class="experience__container__company__detailWrapper__detail">Developed a banking website for a South African bank called "Capitec bank" where we developed various products such as Live Better, Access Facility etc</h3>
-                    <h3 class="experience__container__company__detailWrapper__detail">Skillset: HTML, CSS, JS</h3>
-                    <h3 class="experience__container__company__detailWrapper__detail">Total exp: 3.5 Years</h3>
-                    <h3 class="experience__container__company__detailWrapper__detail">Period: Apr, 2019 - Oct, 2022</h3>
-                </div>
-            </div>
-            <div class="experience__container__company">
-                <div class="experience__container__company__logoWrapper">
-                    <img class="experience__container__company__logoWrapper__logo" src="./images/informatica.png"/>
-                </div>
-                <div class="experience__container__company__detailWrapper">
-                    <h2 class="experience__container__company__detailWrapper__header">Informatica</h2>
-                    <h3 class="experience__container__company__detailWrapper__detail">Developed various products of Informatica Intelligent Cloud Services (IICS) such as Data integration, Administrator etc</h3>
-                    <h3 class="experience__container__company__detailWrapper__detail">Skillset: React, Javascript, HTML, CSS</h3>
-                    <h3 class="experience__container__company__detailWrapper__detail">Total exp: Present</h3>
-                    <h3 class="experience__container__company__detailWrapper__detail">Period: Oct, 2022 - Present</h3>
-                </div>
-            </div>
-        </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" aria-labelledby="exp-title">
+    <div class="container">
+      <h2 id="exp-title" class="experience__header">Professional Experience</h2>
+      <div class="experience__container">
+        <!-- Fintellix -->
+        <article class="experience__container__company">
+          <div class="experience__container__company__logoWrapper">
+            <img class="experience__container__company__logoWrapper__logo" src="./images/fintellix.jfif" alt="Fintellix logo" />
+          </div>
+          <div class="experience__container__company__detailWrapper">
+            <h3 class="experience__container__company__detailWrapper__header">Fintellix</h3>
+            <h4 class="experience__container__company__detailWrapper__detail">Developed a banking website for a South African bank called "Capitec bank" where we developed various products such as Live Better, Access Facility etc</h4>
+            <h4 class="experience__container__company__detailWrapper__detail">Skillset: HTML, CSS, JS</h4>
+            <h4 class="experience__container__company__detailWrapper__detail">Total exp: 3.5 Years</h4>
+            <h4 class="experience__container__company__detailWrapper__detail">Period: Apr, 2019 - Oct, 2022</h4>
+          </div>
+        </article>
+        
+        <!-- Informatica -->
+        <article class="experience__container__company">
+          <div class="experience__container__company__logoWrapper">
+            <img class="experience__container__company__logoWrapper__logo" src="./images/informatica.png" alt="Informatica logo" />
+          </div>
+          <div class="experience__container__company__detailWrapper">
+            <h3 class="experience__container__company__detailWrapper__header">Informatica</h3>
+            <h4 class="experience__container__company__detailWrapper__detail">Developed various products of Informatica Intelligent Cloud Services (IICS) such as Data integration, Administrator etc</h4>
+            <h4 class="experience__container__company__detailWrapper__detail">Skillset: React, Javascript, HTML, CSS</h4>
+            <h4 class="experience__container__company__detailWrapper__detail">Total exp: Present</h4>
+            <h4 class="experience__container__company__detailWrapper__detail">Period: Oct, 2022 - Present</h4>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="footer">
-        © <span id="year"></span> Chethan Prabhu 
-    </div>
-    <script src="script.js"></script>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">© <span id="year"></span> Chethan Prabhu</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
